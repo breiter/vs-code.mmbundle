@@ -3,12 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>contactName</key>
-	<string>Alan Schussman</string>
+	<string>Brian Reiter</string>
+	<key>contactEmailRot13</key>
+	<string>oervgre@jbysrervgre.pbz</string>
 	<key>description</key>
-	<string>Atom editor integration.</string>
+	<string>Visual Studio Code editor integration.</string>
 	<key>name</key>
-	<string>Atom</string>
+	<string>VS Code</string>
 	<key>uuid</key>
-	<string>7A68A673-7949-45E5-BD95-FB81CB4A2A74</string>
+	<string>E9F2ACB8-BFA6-4D7B-9FAE-03FC54327597</string>
 </dict>
 </plist>

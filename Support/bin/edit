@@ -1,17 +1,23 @@
 #!/bin/sh
 
 ##
-# edit: backend script of the MailMate Atom bundle, used to invoke the Atom editor (atom.io)
+# edit: backend script of the MailMate vs-code bundle, used to invoke the 
+# Visual Studio Code editor (code.visualstudio.com)
 # 
-# Based on the MacVim and TextMate bundles 
+# Based on the Atom bundle which is based on the MacVim and TextMate bundles 
 ##
 
 PATH=$PATH:/usr/local/bin/:$HOME/bin
 
-if which -s atom; then
-	atom --wait "$MM_EDIT_FILEPATH"
+if which -s code; then
+	code --wait "$MM_EDIT_FILEPATH"
 else
-	osascript -e 'tell app "MailMate" to display dialog "Please install the atom command line tool via the Install Shell Commands function avilable in the Atom application menu." buttons "OK" default button 1 with title "Unable to locate Atom"' >/dev/null 2>&1 &
+	osascript -e "tell app \"MailMate\" to display dialog \"In Visual Studio \
+	Code, please open the Command Palette (⇧⌘P) and type 'shell command' to \
+	find and run the command: \r\r \
+	\\\"Shell Command: Install 'code' command in PATH\\\"\" \
+	buttons	\"OK\" default button 1 with title \"Unable to locate VS Code\"" \
+	> /dev/null 2>&1 &
 fi
 osascript -e 'tell app "MailMate" to activate'
 
